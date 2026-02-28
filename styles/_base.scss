@@ -1,23 +1,23 @@
 @font-face {
-  font-family: 'Gilroy Bold';
-  src: url('../assets/fonts/Gilroy-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap; // Важно для скорости загрузки
+	font-family: "Gilroy Bold";
+	src: url("./assets/fonts/Gilroy-Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap; // Важно для скорости загрузки
 }
 @font-face {
-  font-family: 'Gilroy Black';
-  src: url('../assets/fonts/Gilroy-Black.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap; // Важно для скорости загрузки
+	font-family: "Gilroy Black";
+	src: url("./assets/fonts/Gilroy-Black.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap; // Важно для скорости загрузки
 }
 @font-face {
-  font-family: 'Gilroy Medium';
-  src: url('../assets/fonts/Gilroy-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap; // Важно для скорости загрузки
+	font-family: "Gilroy Medium";
+	src: url("./assets/fonts/Gilroy-Medium.woff2") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap; // Важно для скорости загрузки
 }
 
 html {
@@ -28,7 +28,7 @@ html {
 
 body {
 	font-size: 1.6rem;
-	font-family: 'Gilroy Medium', sans-serif;
+	font-family: "Gilroy Medium", sans-serif;
 }
 
 section {
@@ -38,13 +38,12 @@ section {
 	padding: 10rem 0;
 }
 
-h1{
+h1 {
 	font-size: 4rem;
 	width: 100%;
 	text-align: center;
 	margin-bottom: 5vw;
 }
-
 
 .container__standart {
 	max-width: 134rem;
@@ -53,6 +52,6 @@ h1{
 	width: 100%;
 }
 
-.relative{
+.relative {
 	position: relative;
 }

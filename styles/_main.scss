@@ -1,21 +1,34 @@
+.flex-container {
+	@include flex-between;
+	margin-top: 8vw;
+}
 .section {
 	&__main {
-		background-image: url("../assets/img/mainPhoto.webp");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+		// background-image: url("../assets/img/mainPhoto.webp");
+		// background-position: center;
+		// background-repeat: no-repeat;
+		// background-size: cover;
+		background-color: var(--dark-blue);
 	}
+
 	&__main-text {
+		width: 50%;
+		height: 450px;
+		@include flex-column;
 		& h2 {
-			font-size: 6rem;
+			font-size: 5rem;
 			color: var(--accent-color);
-			text-align: center;
-			margin-top: 10vw;
+			// text-align: center;
+			// margin-top: 5vw;
+			& span {
+				margin-top: 2rem;
+				display: block;
+			}
 		}
 		& p {
 			font-size: 2.4rem;
 			color: var(--accent-color);
-			text-align: center;
+			// text-align: center;
 			margin: 2rem 0 4rem 0;
 		}
 		& button {
@@ -24,8 +37,9 @@
 			border: 2px solid var(--accent-color);
 			padding: 1.5rem 3rem;
 			font-size: 1.8rem;
+			width: fit-content;
 			border-radius: 0.5rem;
-			margin: 6rem auto;
+			// margin: 6rem 0;
 			display: block;
 			transition: all var(--transition-speed) ease-in-out;
 			@media (hover: hover) {
@@ -40,8 +54,9 @@
 		}
 		& a {
 			display: block;
-			text-align: center;
-			margin-top: 12rem;
+			position: absolute;
+			left: 50%;
+			bottom: -8rem;
 			font-size: 1.6rem;
 			color: var(--accent-color);
 			@media (hover: hover) {
@@ -70,10 +85,18 @@
 	&__main-span {
 		font-size: 3.6rem;
 	}
-
+	&__main-img {
+		width: 50%;
+		overflow: hidden;
+		& img {
+			width: 100%;
+			height: 40rem;
+			border-radius: 1rem;
+		}
+	}
 	// ==== SECTION ABOUT US ==== //
-
 	&__about-us {
+		background-color: #b0b0b0;
 		h1 {
 			font-size: 4rem;
 			text-align: center;
@@ -97,14 +120,16 @@
 				width: 60%;
 			}
 			& img {
-				width: 25%;
+				width: 30%;
 				border-radius: 1rem;
+			}
+			& span {
+				font-weight: 600;
+				text-decoration: underline;
 			}
 		}
 	}
-
 	// ==== SECTION OUR BENEFITS ==== //
-
 	&__our-benefits {
 		&-grid {
 			display: flex;
@@ -113,9 +138,13 @@
 			gap: 3rem;
 		}
 		&-card {
-			width: 20%;
+			overflow: hidden;
+			width: 30%;
 			border: 2px solid var(--dark-text);
-			padding: 2rem;
+			padding: 3rem;
+			border-radius: 2.5rem;
+			background-color: var(--border-color);
+			color: var(--accent-color);
 			& span {
 				display: block;
 				width: 100%;
@@ -123,12 +152,39 @@
 				background-color: var(--accent-color);
 				margin: 1.5rem 0;
 			}
+			& img {
+				width: 100%;
+				margin-bottom: 2rem;
+				height: 125px;
+				border-radius: 2.5rem;
+			}
+			& h4 {
+				font-size: 2rem;
+				margin-bottom: 1rem;
+				color: var(--accent-color);
+			}
+		}
+		.full-card {
+			width: 47.5%;
+			margin-top: 3rem;
+			display: flex;
+			.img__block {
+				width: 40%;
+				margin-right: 2rem;
+				& img {
+					width: 100%;
+					height: 100%;
+					margin-bottom: 0px;
+				}
+			}
+			.info__block {
+				width: 60%;
+			}
 		}
 	}
-
 	// ==== SECTION TERMS OF COOPERATION ==== //
-
 	&__terms {
+		background-color: var(--card-bg);
 		&-text {
 			line-height: 1.5;
 			margin-top: 3rem;
@@ -144,37 +200,154 @@
 	}
 	// ==== SECTION SPECIALIST ==== //
 	&__specialist {
-		&-text{
+		&-text {
 			& p {
 				margin: 2rem 0;
 				font-size: 2rem;
+				font-weight: 600;
 			}
 			& ul {
-				border: 1px solid var(--dark-text);
+				border: 2px solid var(--accent-color);
 				border-radius: 2.5rem;
 				padding: 2rem;
+				background-color: var(--dark-blue);
 				& li {
 					font-size: 1.8rem;
 					font-weight: 600;
 					margin: 1rem 0;
+					color: var(--accent-color);
 				}
 			}
 		}
-		}
+	}
 	// ==== SECTION GALLERY ==== //
 	&__gallery {
+		background-color: var(--card-bg);
 		&-grid {
 			& img {
 				width: 12%;
 			}
+		}
+		// ==== SECTION FORM ==== //
+		&__form {
+		}
+		// ==== SECTION CONTACTS ==== //
+		&__contacts {
+		}
+
+		.slider-container {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0 60px; /* Это место для стрелок слева и справа */
+			max-width: 1200px; /* Или твоя ширина */
+			margin: 0 auto;
+			padding-bottom: 5rem;
+		}
+
+		.swiper {
+			width: 100%;
+			height: 500px;
+			overflow: hidden; /* Теперь он снова скрывает лишние слайды! */
+		}
+
+		/* Позиционируем стрелки относительно .slider-container */
+		.swiper-button-prev,
+		.swiper-button-next {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 10;
+			cursor: pointer;
+			color: var(--dark-blue) !important; /* Твой красный цвет */
+			width: 40px !important; /* Устанавливаем фиксированную ширину для стрелок */
+			transform: scale(1.4);
+		}
+
+		.swiper-button-prev {
+			left: 0px !important; /* Отступ от левого края контейнера */
+		}
+
+		.swiper-button-next {
+			right: 0px !important; /* Отступ от правого края контейнера */
+		}
+		.swiper-slide {
+			overflow: hidden;
+			height: 100%;
+			& img {
+				width: 100%;
+				height: 100%;
+				border-radius: 10px;
+				display: block;
+				object-fit: cover;
+			}
+		}
+
+		.swiper-pagination {
+			margin-top: 150px;
+			& span {
+				background: var(--dark-blue) !important; /* Твой красный цвет */
+				transform: scale(2);
+				margin: 0rem 1.2rem !important;
+			}
+		}
 	}
 	// ==== SECTION FORM ==== //
 	&__form {
-		
+		min-height: fit-content;
+		#contactForm {
+			@include flex-between;
+			gap: 1.5rem;
+			width: 90%;
+			margin: 0 auto;
+			& input,
+			button {
+				padding: 3rem;
+				border-radius: 0.5rem;
+				border: 2px solid var(--dark-blue);
+				width: 100%;
+				font-size: 1.6rem;
+				border-radius: 2.5rem;
+				background-color: var(--border-color);
+				color: var(--dark-text);
+				font-size: 1.8rem;
+				font-weight: 600;
+			}
+			& input {
+				background-color: var(--accent-color);
+				padding-left: 7rem;
+				color: var(--dark-blue);
+				&::placeholder {
+					color: var(--dark-blue);
+					font-weight: 600;
+					font-size: 1.8rem;
+					opacity: 0.8;
+				}
+				&#name,
+				&#phone,
+				&#email {
+					background-image: url("../assets/img/icons/name.svg");
+					background-repeat: no-repeat;
+					background-position: left;
+					background-size: 3rem;
+					background-position-x: 2rem;
+				}
+				&#phone {
+					background-image: url("../assets/img/icons/phone.svg");
+				}
+				&#email {
+					background-image: url("../assets/img/icons/mail.svg");
+				}
+			}
+			& button {
+				color: var(--accent-color);
+			}
+		}
 	}
-	// ==== SECTION CONTACTS ==== //
 	&__contacts {
-
+		background-color: var(--dark-blue);
+		color: var(--accent-color);
+		min-height: fit-content;
 	}
-}
 }

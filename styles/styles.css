@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -16,31 +17,32 @@ li {
 }
 
 :root {
-  --primary-color: #A0C4F2;
+  --primary-color: #a0c4f2;
   --accent-color: #f3f5ee;
   --border-color: #2a6e71;
-  --card-bg: #D0E3E8;
+  --card-bg: #d0e3e8;
   --dark-text: #1e241a;
+  --dark-blue: #182e4f;
   --transition-speed: 0.3s;
 }
 
 @font-face {
   font-family: "Gilroy Bold";
-  src: url("../assets/fonts/Gilroy-Bold.woff2") format("woff2");
+  src: url("./assets/fonts/Gilroy-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Gilroy Black";
-  src: url("../assets/fonts/Gilroy-Black.woff2") format("woff2");
+  src: url("./assets/fonts/Gilroy-Black.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Gilroy Medium";
-  src: url("../assets/fonts/Gilroy-Medium.woff2") format("woff2");
+  src: url("./assets/fonts/Gilroy-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -82,7 +84,7 @@ h1 {
 }
 
 header {
-  background-color: rgba(4, 53, 102, 0.5764705882);
+  background-color: rgba(4, 53, 102, 0.5411764706);
   position: fixed;
   width: 100%;
   height: fit-content;
@@ -90,7 +92,7 @@ header {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(0.5rem) brightness(0.6);
+  backdrop-filter: blur(0.6rem) brightness(0.6);
   height: fit-content;
   padding: 2rem 0;
 }
@@ -379,22 +381,34 @@ header {
   }
 }
 
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8vw;
+}
+
 .section__main {
-  background-image: url("../assets/img/mainPhoto.webp");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: var(--dark-blue);
+}
+.section__main-text {
+  width: 50%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .section__main-text h2 {
-  font-size: 6rem;
+  font-size: 5rem;
   color: var(--accent-color);
-  text-align: center;
-  margin-top: 10vw;
+}
+.section__main-text h2 span {
+  margin-top: 2rem;
+  display: block;
 }
 .section__main-text p {
   font-size: 2.4rem;
   color: var(--accent-color);
-  text-align: center;
   margin: 2rem 0 4rem 0;
 }
 .section__main-text button {
@@ -403,8 +417,8 @@ header {
   border: 2px solid var(--accent-color);
   padding: 1.5rem 3rem;
   font-size: 1.8rem;
+  width: fit-content;
   border-radius: 0.5rem;
-  margin: 6rem auto;
   display: block;
   transition: all var(--transition-speed) ease-in-out;
 }
@@ -421,8 +435,9 @@ header {
 }
 .section__main-text a {
   display: block;
-  text-align: center;
-  margin-top: 12rem;
+  position: absolute;
+  left: 50%;
+  bottom: -8rem;
   font-size: 1.6rem;
   color: var(--accent-color);
 }
@@ -452,6 +467,18 @@ header {
 .section__main-span {
   font-size: 3.6rem;
 }
+.section__main-img {
+  width: 50%;
+  overflow: hidden;
+}
+.section__main-img img {
+  width: 100%;
+  height: 40rem;
+  border-radius: 1rem;
+}
+.section__about-us {
+  background-color: #b0b0b0;
+}
 .section__about-us h1 {
   font-size: 4rem;
   text-align: center;
@@ -475,8 +502,12 @@ header {
   width: 60%;
 }
 .section__about-us-img img {
-  width: 25%;
+  width: 30%;
   border-radius: 1rem;
+}
+.section__about-us-img span {
+  font-weight: 600;
+  text-decoration: underline;
 }
 .section__our-benefits-grid {
   display: flex;
@@ -485,9 +516,13 @@ header {
   gap: 3rem;
 }
 .section__our-benefits-card {
-  width: 20%;
+  overflow: hidden;
+  width: 30%;
   border: 2px solid var(--dark-text);
-  padding: 2rem;
+  padding: 3rem;
+  border-radius: 2.5rem;
+  background-color: var(--border-color);
+  color: var(--accent-color);
 }
 .section__our-benefits-card span {
   display: block;
@@ -495,6 +530,37 @@ header {
   height: 0.3rem;
   background-color: var(--accent-color);
   margin: 1.5rem 0;
+}
+.section__our-benefits-card img {
+  width: 100%;
+  margin-bottom: 2rem;
+  height: 125px;
+  border-radius: 2.5rem;
+}
+.section__our-benefits-card h4 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+.section__our-benefits .full-card {
+  width: 47.5%;
+  margin-top: 3rem;
+  display: flex;
+}
+.section__our-benefits .full-card .img__block {
+  width: 40%;
+  margin-right: 2rem;
+}
+.section__our-benefits .full-card .img__block img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0px;
+}
+.section__our-benefits .full-card .info__block {
+  width: 60%;
+}
+.section__terms {
+  background-color: var(--card-bg);
 }
 .section__terms-text {
   line-height: 1.5;
@@ -511,17 +577,133 @@ header {
 .section__specialist-text p {
   margin: 2rem 0;
   font-size: 2rem;
+  font-weight: 600;
 }
 .section__specialist-text ul {
-  border: 1px solid var(--dark-text);
+  border: 2px solid var(--accent-color);
   border-radius: 2.5rem;
   padding: 2rem;
+  background-color: var(--dark-blue);
 }
 .section__specialist-text ul li {
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1rem 0;
+  color: var(--accent-color);
+}
+.section__gallery {
+  background-color: var(--card-bg);
 }
 .section__gallery-grid img {
   width: 12%;
+}
+.section__gallery .slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 60px; /* Это место для стрелок слева и справа */
+  max-width: 1200px; /* Или твоя ширина */
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+.section__gallery .swiper {
+  width: 100%;
+  height: 500px;
+  overflow: hidden; /* Теперь он снова скрывает лишние слайды! */
+}
+.section__gallery {
+  /* Позиционируем стрелки относительно .slider-container */
+}
+.section__gallery .swiper-button-prev,
+.section__gallery .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  color: var(--dark-blue) !important; /* Твой красный цвет */
+  width: 40px !important; /* Устанавливаем фиксированную ширину для стрелок */
+  transform: scale(1.4);
+}
+.section__gallery .swiper-button-prev {
+  left: 0px !important; /* Отступ от левого края контейнера */
+}
+.section__gallery .swiper-button-next {
+  right: 0px !important; /* Отступ от правого края контейнера */
+}
+.section__gallery .swiper-slide {
+  overflow: hidden;
+  height: 100%;
+}
+.section__gallery .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+}
+.section__gallery .swiper-pagination {
+  margin-top: 150px;
+}
+.section__gallery .swiper-pagination span {
+  background: var(--dark-blue) !important; /* Твой красный цвет */
+  transform: scale(2);
+  margin: 0rem 1.2rem !important;
+}
+.section__form {
+  min-height: fit-content;
+}
+.section__form #contactForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+}
+.section__form #contactForm input,
+.section__form #contactForm button {
+  padding: 3rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--dark-blue);
+  width: 100%;
+  font-size: 1.6rem;
+  border-radius: 2.5rem;
+  background-color: var(--border-color);
+  color: var(--dark-text);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.section__form #contactForm input {
+  background-color: var(--accent-color);
+  padding-left: 7rem;
+  color: var(--dark-blue);
+}
+.section__form #contactForm input::placeholder {
+  color: var(--dark-blue);
+  font-weight: 600;
+  font-size: 1.8rem;
+  opacity: 0.8;
+}
+.section__form #contactForm input#name, .section__form #contactForm input#phone, .section__form #contactForm input#email {
+  background-image: url("../assets/img/icons/name.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 3rem;
+  background-position-x: 2rem;
+}
+.section__form #contactForm input#phone {
+  background-image: url("../assets/img/icons/phone.svg");
+}
+.section__form #contactForm input#email {
+  background-image: url("../assets/img/icons/mail.svg");
+}
+.section__form #contactForm button {
+  color: var(--accent-color);
+}
+.section__contacts {
+  background-color: var(--dark-blue);
+  color: var(--accent-color);
+  min-height: fit-content;
 }/*# sourceMappingURL=styles.css.map */
