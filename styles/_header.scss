@@ -122,13 +122,14 @@ header {
 	}
 	&__btn {
 		background: transparent;
-		border: 0.1rem solid var(--primary-color);
+		border: 0.1rem solid var(--accent-color);
+		border-radius: 2.5rem;
 		color: var(--accent-color);
 		padding: 0.5rem 1rem;
 		@media (hover: hover) {
 			cursor: pointer;
 			&:hover {
-				background-color: var(--primary-color);
+				background-color: var(--card-bg);
 				color: var(--dark-text);
 				border: 0.1rem solid var(--dark-text);
 				transition: all var(--transition-speed) ease-in-out;
