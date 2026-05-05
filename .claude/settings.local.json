@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sass --version)",
+      "Bash(npx --version)",
+      "Bash(npx --yes sass --version)",
+      "Bash(npx --yes sass styles/styles.scss styles/styles.css --style=expanded)",
+      "Bash(npx --yes sass styles/styles.scss styles/styles.css --style=expanded --quiet)"
+    ]
+  }
+}

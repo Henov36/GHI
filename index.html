@@ -5,121 +5,87 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="styles/styles.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<script	script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-		<script defer src="./js/mail.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script type="module" defer src="./js/mail.js"></script>
 		<title>Global Hire Int.</title>
 	</head>
 	<body>
-		<header>
-			<div class="header__relative">
-				<div class="header__top container__standart">
-					<img
-						class="header__logo"
-						src="./assets/img/logo.png"
-						alt="Logo" />
+		<header class="site-header">
+			<div class="site-header__bar container__standart">
+				<a href="#main-section" class="site-header__logo">
+					<img src="./assets/img/logo.png" alt="Global Hire Int." />
+				</a>
+				<nav class="site-header__nav">
+					<a data-key="header.home" href="#main-section">Головна</a>
+					<a data-key="header.about" href="#about-us">Про нас</a>
+					<a data-key="header.benefits" href="#benefits">Переваги</a>
+					<a data-key="header.specialists" href="#specialists">Cпеціалісти</a>
+					<a data-key="header.contact" href="#footer">Контакти</a>
+				</nav>
+				<div class="site-header__side">
+					<a href="tel:+06812523332" class="site-header__tel">
+						<img src="./assets/img/icons/phone1.svg" alt="" />
+						<span>+06812523332</span>
+					</a>
+					<div class="site-header__lang" role="group">
+						<button type="button" class="active" data-lang="ua">UA</button>
+						<button type="button" data-lang="en">EN</button>
+						<button type="button" data-lang="ru">RU</button>
+					</div>
+					<a href="#footer" type="button" class="site-header__cta" data-key="header.cta_button">Зв'язатися</a>
+					<button type="button" class="site-header__burger" aria-label="Меню">
+						<span></span>
+					</button>
+				</div>
+			</div>
+			<div class="site-header__drawer">
+				<nav class="site-header__drawer-nav">
+					<a data-key="header.home" href="#main-section">Головна</a>
+					<a data-key="header.about" href="#about-us">Про нас</a>
+					<a data-key="header.benefits" href="#benefits">Переваги</a>
+					<a data-key="header.specialists" href="#specialists">Cпеціалісти</a>
+					<a data-key="header.contact" href="#footer">Контакти</a>
+				</nav>
+				<div class="site-header__drawer-info">
 					<p>
-						<img
-							class="header__small-icons"
-							src="./assets/img/icons/mail.svg"
-							alt="" />
+						<img src="./assets/img/icons/email1.svg" alt="" />
 						info@mail.com
 					</p>
 					<a href="tel:+06812523332">
-						<img
-							class="header__small-icons"
-							src="./assets/img/icons/phone.svg"
-							alt="" />
-						+06812523332</a
-					>
-					<div class="header__socials">
-						<img src="./assets/img/icons/inst.svg" alt="insta" />
-						<img src="./assets/img/icons/face.svg" alt="facebook" />
-					</div>
-					<select class="header__lang" name="lang" id="lang">
-						<option value="ua">UA</option>
-						<option value="en">EN</option>
-						<option value="ru">RU</option>
-					</select>
+						<img src="./assets/img/icons/phone1.svg" alt="" />
+						+06812523332
+					</a>
 				</div>
-				<div class="header__container container__standart">
-					<img class="header__logo-hidden" src="" alt="Logo" />
-					<nav class="header__nav">
-						<ul class="header__list">
-							<li><a href="/">Головна</a></li>
-							<li><a href="#about-us">Про нас</a></li>
-							<li><a href="">Наші переваги</a></li>
-							<li><a href="">Умови співпраці</a></li>
-							<li><a href="">Cпеціалісти</a></li>
-							<li><a href="">Контакти</a></li>
-						</ul>
-					</nav>
-					<button class="header__btn">Звя'затися з нами</button>
+				<div class="site-header__drawer-socials">
+					<img src="./assets/img/icons/inst1.svg" alt="insta" />
+					<img src="./assets/img/icons/face1.svg" alt="facebook" />
 				</div>
-			</div>
-			<div class="header__mobile">
-				<img
-					class="header__logo-mobile"
-					src="./assets/img/luxbuxlogo.svg"
-					alt="Logo" />
-				<button class="header__burger">
-					<span></span>
-				</button>
-				<div class="header__hidden-list">
-					<ul class="header__list-mobile">
-						<li><a href="/">Головна</a></li>
-						<li><a href="#about-us">Про нас</a></li>
-						<li><a href="">Наші переваги</a></li>
-						<li><a href="">Умови співпраці</a></li>
-						<li><a href="">Cпеціалісти</a></li>
-						<li><a href="">Контакти</a></li>
-					</ul>
-					<button class="header__btn-mobile">Звя'затися з нами</button>
-					<div class="header__info-mobile">
-						<p>
-							<img
-								class="header__small-icons"
-								src="./assets/img/icons/mail.svg"
-								alt="" />
-							info@mail.com
-						</p>
-						<a href="tel:+06812523332">
-							<img
-								class="header__small-icons"
-								src="./assets/img/icons/phone.svg"
-								alt="" />
-							+06812523332</a
-						>
-					</div>
-					<div class="header__socials-mobile">
-						<img src="./assets/img/icons/inst.svg" alt="insta" />
-						<img src="./assets/img/icons/face.svg" alt="facebook" />
-					</div>
-					<select
-						class="header__lang-mobile"
-						name="lang-mobile"
-						id="lang-mobile">
-						<option value="ua">UA</option>
-						<option value="en">EN</option>
-						<option value="ru">RU</option>
-					</select>
+				<div class="site-header__lang site-header__lang--drawer" role="group">
+					<button type="button" class="lang-btn active" data-lang="ua">UA</button>
+					<button type="button"  class="lang-btn" data-lang="en">EN</button>
+					<button type="button"  class="lang-btn" data-lang="ru">RU</button>
 				</div>
+				<a href="#footer" type="button" class="site-header__cta site-header__cta--drawer" data-key="header.cta_button">Зв'язатися з нами</a>
 			</div>
 		</header>
 		<main>
 			<section class="section__main" id="main-section">
+				<div class="section__main-fade"></div>
 				<div class="container__standart flex-container relative">
 					<div class="section__main-text">
-						<h2>
-							Найм та адаптація працівників з-за кордону<br /><span class="section__main-span"
-								>«ТОВ Глобал Хайр Интернейшнл»</span
+						<h2 class="fade-right" data-key="main.full_title">
+							Найм та адаптація працівників з-за кордону<br />
+							<span class="section__main-span"
+								>ТОВ «Глобал Хайр Интернейшнл»
+							</span
 							>
 						</h2>
-						<p>
+						<p class="fade-right" data-key="main.under_title">
 							ТОВ «Глобал Хайр Интернейшнл» відчиняє новий рекрутинговий
 							напрямок на ринку праці України.
 						</p>
-						<button class="section__main-btn">Звя'затися з нами</button>
-						<a href="#about-us">
+						<a href="#footer" class="section__main-btn fade-right" data-key="header.cta_button">Звя'затися з нами</a>
+						<a class="main-arrow" href="#about-us">
 							<img src="./assets/img/icons/arrow-down.svg" alt="#" />
 						</a>
 					</div>
@@ -127,160 +93,208 @@
 			</section>
 			<section id="about-us" class="section__about-us">
 				<div class="container__standart">
-					<h1>Про нас</h1>
+					<h1 class="fade-down" data-key="aboutUs.title">Про нас</h1>
 
-					<div class="section__about-us-img">
-						<p>
-					<span>ТОВ «Глобал Хайр Інтернейшнл»</span> реалізує проекти з міжнародного
-                        пошуку, підбору та оформлення кваліфікованого іноземного
-                        персоналу для українських підприємств. 
-						Підбір кваліфікованого персоналу - юридичне оформлення документів для роботи в Україні.<span> Супровід після приїзду.</span>
-						<br></br>
-						Мене звати <span>Оксана Подобна</span>, я є керівником компанії, яка
-                        вже кілька років займається створенням операційного хабу для
-                        системного залучення робочої сили з Індії в Україну. До кінця
-						року наш рекрутинговий офіс планує працевлаштувати до<span> 5 тис. працівників</span>
-                         на території західних і центральних регіонів. Компанія
-                        «Глобал Хайр Інтернейшнл» заснована в 2025 році в Києві (Україна) і
-						спеціалізується на міжнародному рекрутингу, підборі персоналу та
-                        аутсорсингу трудових ресурсів. Компанія представлена в 5 країнах
-                        світу. Офіси та рекрутингові центри «Глобал Хайр Інтернейшнл» працюють
-						в країнах Близького Сходу, Південно-Східної Азії, Африки та Європи.
-                        Ключові напрямки діяльності — забезпечення робочою силою
-                        компаній нафтогазового сектора, будівельної галузі, судноплавства та
-                        логістики, виробництва та готельного бізнесу. За відкритими даними,
-						за 3 роки роботи на глобальному ринку в нашій компанії <span> працевлаштували
-						більше ніж 500 осіб.</span>
-						</p>
-						<img src="./assets/img/photo/oksana.jpg" alt="" />
+					<div class="section__about-us-img fade-left">
+						
+						<div class="seo-info">
+							<p data-key="aboutUs.seo.p1">
+							<span>ТОВ «Глобал Хайр Інтернейшнл»</span> - ваш надійний партнер у підборі іноземного персоналу з 2023 року. Ми спеціалізуємося на пошуку та відборі кваліфікованих іноземних фахівців для українських компаній. Наша місія – допомогти бізнесу знайти найкращих кандидатів з усього світу, забезпечуючи <span>ефективну інтеграцію та швидку адаптацію</span> спеціалістів у новому середовищі.
+							</p>
+							<p data-key="aboutUs.seo.p2">
+							<span>Ми працюємо прозоро, швидко та ефективно.</span> Наші клієнти отримують не просто кандидатів, а справжніх професіоналів, готових принести результат від перших днів роботи. Ми розумíємо, що кожен бíзнес унíкальний, тому пропонуємо <span> індивíдуальний пíдх³д до кожного кл³єнта</span>, враховуючи його специф³ку та потреби.
+							</p>
+							<img class="fade-right hidden-img" src="./assets/img/photo/oksana.jpg" alt="" />
+							<p data-key="aboutUs.seo.p3">
+							Мене звати <span>Оксана Подобна</span>, я є керівником компанії, яка
+							вже кілька років займається створенням операційного хабу для
+							системного залучення робочої сили з країн Азії в Україну. До кінця
+							року наш рекрутинговий офіс планує працевлаштувати до<span> 5 тис. працівників</span>
+							на території західних і центральних регіонів. Компанія
+							«Глобал Хайр Інтернейшнл» заснована в 2023 році в Києві (Україна) і
+							спеціалізується на міжнародному рекрутингу, підборі персоналу та
+							аутсорсингу трудових ресурсів. Компанія представлена в 5 країнах
+							світу. Офіси та рекрутингові центри «Глобал Хайр Інтернейшнл» працюють
+							в країнах Близького Сходу, Південно-Східної Азії, Африки та Європи.
+							Ключові напрямки діяльності — забезпечення робочою силою
+							компаній нафтогазового сектора, будівельної галузі, судноплавства та
+							логістики, виробництва та готельного бізнесу. За відкритими даними,
+							за 3 роки роботи на глобальному ринку в нашій компанії <span> працевлаштували
+							більше ніж 500 осіб.</span>
+								</p>
+						</div>
+						<img class="fade-right visible-img" src="./assets/img/photo/oksana.jpg" alt="" />
 					</div>
 				</div>
 			</section>
-			<section class="section__our-benefits">
+			<section id="benefits" class="section__our-benefits">
 				<div class="container__standart">
-					<h1>Наші переваги</h1>
+					<h1 class="fade-down" data-key="benefits.title">Наші переваги</h1>
 					<div class="section__our-benefits-grid">
-						<div class="section__our-benefits-card">
-							<h4>Гарантований якісний підбір</h4>
+						<div class="section__our-benefits-card fade-down">
+							<h4 data-key="benefits.cards.card1.title">Гарантований якісний підбір</h4>
 							<span></span>
 							<img src="./assets/img/111.png" alt="quality" />
-							<p>Маємо партнерські
-							центри в Індії та Непалі, які проводять професійний відбір і тестування працівників.</p>
+							<p data-key="benefits.cards.card1.text">Широкий охоплення географії: Ми працюємо з країнами Європи, Азії, Латинської Америки та Близького Сходу.</p>
 						</div>
-						<div class="section__our-benefits-card">
-							<h4>Cупровід процесу легалізації</h4>
+						<div class="section__our-benefits-card fade-down">
+							<h4 data-key="benefits.cards.card2.title">Cупровід процесу легалізації</h4>
 							<span></span>
 							<img src="./assets/img/222.jpg" alt="quality" />
-							<p> Повний супровід процесу легалізації та
-							прибуття Беремо на себе всі формальності:- оформлення запрошень;-
+							<p data-key="benefits.cards.card2.text"> Повний супровід процесу легалізації та
+							прибуття Беремо на себе всі формальності: - оформлення запрошень;-
 							отриманих дозвілів на роботу (ДРП);- переклади, завірения та
 							легалізація, робочі візи, супровід та оформлення страхових полісів</p>
 						</div>
-						<div class="section__our-benefits-card">
-							<h4>Швидкість та ефективність</h4>
+						<div class="section__our-benefits-card fade-down">
+							<h4 data-key="benefits.cards.card3.title">Швидкість та ефективність</h4>
 							<span></span>
 							<img src="./assets/img/333.jpg" alt="quality" />
-							<p>Завдяки налагодженим процесам та
+							<p data-key="benefits.cards.card3.text">Завдяки налагодженим процесам та
 							широкій мережі партнерів, ми забезпечуємо швидкий та ефективний
-							підбір персоналу.</p>
+							підбір персоналу та пошук унікальних талантів, які допоможуть вашому бізнесу.</p>
 						</div>
-						<div class="section__our-benefits-card full-card">
+						<div class="section__our-benefits-card full-card fade-in">
 							<div class="img__block">
 								<img src="./assets/img/benefitsPhoto/unnamed.png" alt="quality" />
 							</div>
 							<div class="info__block">
-							<h4>Інтеграція працівників</h4>
+							<h4  data-key="benefits.cards.card4.title">Інтеграція працівників</h4>
 							<span></span>
-							<p>Підтримка після прибуття Надаємо підтримку та
+							<p data-key="benefits.cards.card4.text">Підтримка після прибуття Надаємо підтримку та
 							адаптацію працівників після прибуття в Україну, щоб забезпечити їх
 							комфорт та успішну інтеграцію.</p>
 							</div>
 							
 						</div>
-						<div class="section__our-benefits-card full-card">
+						<div class="section__our-benefits-card full-card fade-in">
 							<div class="img__block">
 								<img src="./assets/img/benefitsPhoto/expert.jpg" alt="quality" />
 							</div>
 							<div class="info__block">
-							<h4>Експертність</h4>
+							<h4 data-key="benefits.cards.card5.title">Експертність</h4>
 							<span></span>
-							<p>Наші фахівці мають глибоку експертність у сфері міжнародного рекрутингу. Більш ніж 500 працівників було успішно працевлаштовано за останній рік.</p>	
+							<p data-key="benefits.cards.card5.text">Глибоке розуміння ринку. Ми знаємо потріби українських компаній та вимоги до іноземних працівників.</p>	
 							</div>
 							
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="section__terms">
-				<div class="container__standart">
-					<h1>Умови співпраці</h1>
-					<div class="section__terms-text">
-						<p>Термін підбору та прибуття робітника: 50-70 робочих днів (залежить
-							від кількості та категорії персоналу).</p>
-						<p>Мінімальний обсяг
-							замовлення від 10 працівників. </p>
-						<p>Вартість послуг: 75 000 грн за
-							одного працівника. В дану вартість включені абсолютно всі витрати,
-							в тому числі і сплита державного мита для отримания дозволу на
-							застосування праці іноземцями та оформления посвід хина тим асове
-							проживання, витрати на транспорт та інше.</p>
-						<p>Оплата: поетапна 70%
-							сплачується на протязі 3 днів з моменту укладання договору про
-							надання послуг, інші 30% сплачуються на протязі 3 днів з моменту
-							прибуття працівника на територію України.</p>
-						<p>
-							Усі кандидати проходять
-							попередню перевірку досвіду, навичок та готовності до роботи в
-							Україні. Попередній рівень заробітної плати, на який розраховують
-							дані працівники 500-800$ в місяць. Дана цифра залежить від країни
-							походження працівника та його досвіду.
-						</p>
-						<p>
-							Також, якщо Ваше
-							підприємство нараховує заробітну плату відповідно до норми чи
-							таргету, просимо попередьню повідомити про це особу, яка буде
-							відповідальна за Ваш проект.
-						</p>
+			<section class="section__form">
+				<div class="container__standart form-flex">
+					<div class="fade-left">
+						<h1 data-key="change.needWork">Потрібна робота?</h1>
+						<button data-key="change.contactUs" class="section__main-btn open-button">
+							Залишити заявку
+						</button>
+					</div>
+				
+					<div class="fade-right">
+						<h1 data-key="change.needWorkers">Потрібні працівники?</h1>
+						<button data-key="change.contactUs" class="section__main-btn open-button2">
+							Залишити заявку
+						</button>
 					</div>
 				</div>
 			</section>
-			<section class="section__specialist">
+			<section id="specialists" class="section__specialist">
 				<div class="container__standart">
-					<h1>Cпеціалісти</h1>
-					<div class="section__specialist-text">
-						<p>Наша компанія пропонує підбір кваліфікованого персоналу для різних галузей та професій.</p>
-						<ul>
-							<li>- мулярі</li>
-							<li>- арматурники</li>
-							<li>- бетонярі</li>
-							<li>- опалубники</li>
-							<li>- каменярі</li>
-							<li>- внутрішні та зовнішні оздоблювальники</li>
-							<li>- плиточники</li>
-							<li>- штукатурі</li>
-							<li>- зварювальники</li>
-							<li>- підсобні робітники</li>
-							<li>- різноробочі на будівельний майданчик</li>
-						</ul>
-						<p>Та спеціалісти для інших галузей таких як:</p>
-						<ul>
-							<li>- виробництво</li>
-							<li>- готельний бізнес</li>
-							<li>- логістика</li>
-							<li>- судоходство</li>
-							<li>- IT та інші.</li>
-							</ul>
-												
-							<p>
-								Якщо Ви не знайшли потрібного спеціаліста в цьому списку, будь ласка, зв'яжіться з нами, і ми знайдемо для Вас найкращого кандидата.
-							</p>
-							
+					<h1 class="fade-down" data-key="specialists.title">Cпеціалісти</h1>
+					<p class="section__specialist-lead fade-left" data-key="specialists.under_title">Наша компанія пропонує підбір кваліфікованого персоналу для різних галузей та професій.</p>
+
+					<div class="tabs fade-in">
+						<div class="tabs__nav" role="tablist">
+							<button class="tabs__btn active" data-tab="construction" role="tab" data-key="specialists.buttons.construction">Будівництво</button>
+							<button class="tabs__btn" data-tab="production" role="tab" data-key="specialists.buttons.manufacturing">Виробництво</button>
+							<button class="tabs__btn" data-tab="hotel" role="tab" data-key="specialists.buttons.hotel">Готельний бізнес</button>
+							<button class="tabs__btn" data-tab="logistics" role="tab" data-key="specialists.buttons.logistics">Логістика</button>
+							<button class="tabs__btn" data-tab="shipping" role="tab" data-key="specialists.buttons.ships">Судноплавство</button>
+							<button class="tabs__btn" data-tab="agro" role="tab" data-key="specialists.buttons.farmer">Аграрний сектор</button>
+							<button class="tabs__btn" data-tab="it" role="tab">IT</button>
+						</div>
+
+						<div class="tabs__panels">
+							<div class="tabs__panel active" data-panel="construction">
+								<ul>
+									<li data-key="specialists.categories.construction.painters">Мулярі</li>
+									<li data-key="specialists.categories.construction.carpenters">Столяри</li>
+									<li data-key="specialists.categories.construction.setters">Плиточники</li>
+									<li data-key="specialists.categories.construction.welders">Сварщики</li>
+									<li data-key="specialists.categories.construction.steel_workers">Арматурщики</li>
+									<li data-key="specialists.categories.construction.roofers">Кровельщики</li>
+									<li data-key="specialists.categories.construction.insulators">Изоляционщики</li>
+									<li data-key="specialists.categories.construction.finishers">Отделочники</li>
+									<li data-key="specialists.categories.construction.plasterers">Штукатуры</li>
+									<li data-key="specialists.categories.construction.staff">Подсобные рабочие</li>
+									<li data-key="specialists.categories.construction.laborers">Разнорабочие</li>
+								</ul>
+							</div>
+							<div class="tabs__panel" data-panel="production">
+								<ul>
+									<li data-key="specialists.categories.manufacturing.manufacturing">Промислові виробництва</li>
+									<li data-key="specialists.categories.manufacturing.food">Харчове виробництво</li>
+									<li data-key="specialists.categories.manufacturing.lines">Оператори лінії</li>
+									<li data-key="specialists.categories.manufacturing.assemblers">Складальники</li>
+									<li data-key="specialists.categories.manufacturing.engineers">Технологи</li>
+								</ul>
+							</div>
+							<div class="tabs__panel" data-panel="hotel">
+								<ul>
+									<li data-key="specialists.categories.hotel.managers">Адміністратори готелів</li>
+									<li data-key="specialists.categories.hotel.housekeepers">Покоївки</li>
+									<li data-key="specialists.categories.hotel.waiters">Офіціанти</li>
+									<li data-key="specialists.categories.hotel.cooks">Кухарі</li>
+									<li data-key="specialists.categories.hotel.staff">Обслуговуючий персонал</li>
+								</ul>
+							</div>
+							<div class="tabs__panel" data-panel="logistics">
+								<ul>
+									<li data-key="specialists.categories.logistics.drivers">Водії</li>
+									<li data-key="specialists.categories.logistics.warehouse">Складські робітники</li>
+									<li data-key="specialists.categories.logistics.wms">Оператори ВРК</li>
+									<li data-key="specialists.categories.logistics.stock">Комірники</li>
+									<li data-key="specialists.categories.logistics.logistics">Логісти</li>
+								</ul>
+							</div>
+							<div class="tabs__panel" data-panel="shipping">
+								<ul>
+									<li data-key="specialists.categories.maritime.sailors">Матроси</li>
+									<li data-key="specialists.categories.maritime.motors">Мотористи</li>
+									<li data-key="specialists.categories.maritime.officers">Судноводії</li>
+									<li data-key="specialists.categories.maritime.technical">Технічний персонал</li>
+									<li data-key="specialists.categories.maritime.dockworkers">Портові робітники</li>
+								</ul>
+							</div>
+							<div class="tabs__panel" data-panel="agro">
+								<ul>
+									<li data-key="specialists.categories.farmer.farmers">Тваринники</li>
+									<li data-key="specialists.categories.farmer.milkers">Доярі</li>
+									<li data-key="specialists.categories.farmer.machine">Механізатори</li>
+									<li data-key="specialists.categories.farmer.field">Польові працівники</li>
+									<li data-key="specialists.categories.farmer.agronomists">Агрономи</li>
+								</ul>
+							</div>
+							<div class="tabs__panel" data-panel="it">
+								<ul>
+									<li data-key="specialists.categories.it.developers">Розробники ПЗ</li>
+									<li data-key="specialists.categories.it.engineers">QA інженери</li>
+									<li>DevOps</li>
+									<li data-key="specialists.categories.it.system">Системні адміністратори</li>
+									<li data-key="specialists.categories.it.dataengineers">Data-інженери</li>
+								</ul>
+							</div>
+						</div>
 					</div>
+
+					<p class="section__specialist-note fade-right" data-key="specialists.bottitle">
+						Якщо Ви не знайшли потрібного спеціаліста в цьому списку, будь ласка, зв'яжіться з нами, і ми знайдемо для Вас найкращого кандидата.
+					</p>
 				</div>
 			</section>
 			<section class="section__gallery">
 				<div class="container__standart">
-					<h1>Наші фото</h1>
+					<h1 class="fade-down" data-key="ourPhoto.title">Наші фото</h1>
 					<div class="slider-container">
   						<div class="swiper-button-prev"></div>
 							<div class="swiper mySwiper">
@@ -301,39 +315,102 @@
  									<div class="swiper-button-next"></div>
 								</div>
 					</div>
-			</section>
+			</section>	
+			<section class="section__partners">
+				<h1>Наші партнери</h1>
+				<div class="partners">
+	<div class="partners__track">
+		<div class="partners__item"><img src="./assets/img/partners/aukso.png" alt=""></div>
+		<div class="partners__item"><img src="./assets/img/partners/brizoll.png" alt=""></div>
+		<div class="partners__item"><img src="./assets/img/partners/ecobud.png" alt=""></div>
+		<div class="partners__item"><img src="./assets/img/partners/globus.jpg" alt=""></div>
+		<div class="partners__item"><img src="./assets/img/partners/integral.svg" alt=""></div>
+		<div class="partners__item"><img src="./assets/img/partners/Nova_Poshta.svg" alt=""></div>
+		<div class="partners__item"><img src="./assets/img/partners/port.jpeg" alt=""></div>
+		<div class="partners__item"><img src="./assets/img/partners/termo.png" alt=""></div>
+
+		<!-- ДУБЛЬ -->
+		<div class="partners__item"><img src="./assets/img/partners/aukso.png" alt=""></div>
+		<div class="partners__item"><img src="./assets/img/partners/brizoll.png" alt=""></div>
+		<div class="partners__item"><img src="./assets/img/partners/ecobud.png" alt=""></div>
+		<div class="partners__item"><img src="./assets/img/partners/globus.jpg" alt=""></div>
+		<div class="partners__item"><img src="./assets/img/partners/integral.svg" alt=""></div>
+		<div class="partners__item"><img src="./assets/img/partners/Nova_Poshta.svg" alt=""></div>
+		<div class="partners__item"><img src="./assets/img/partners/port.jpeg" alt=""></div>
+		<div class="partners__item"><img src="./assets/img/partners/termo.png" alt=""></div>
+	</div>
+</div>
+        </div>
+				</div>
+			</section>	
+			<section id="section__faq" class="fade-in">
+			<h1 data-key="FAQ.title"></h1>
+			<div class="accordion">
+				<div class="accordion__item">
+					<div class="accordion__header" data-key="FAQ.accordion.card1.title">Який термін підбору персоналу?</div>
+					<div class="accordion__content">
+						<p data-key="FAQ.accordion.card1.text">Термін підбору персоналу залежить від кількості вакансій та специфіки проекту. Зазвичай це займає від 50 до 70 робочіх днів.</p>
+					</div>
+				</div>
+				<div class="accordion__item">
+					<div class="accordion__header" data-key="FAQ.accordion.card2.title">Скільки працівників ви можете надати?</div>
+					<div class="accordion__content">
+						<p data-key="FAQ.accordion.card2.text">Мінімальний обсяг - 10 працівників, максимальний - залежить від потреб клієнта.</p>
+					</div>
+				</div>
+				<div class="accordion__item">
+					<div class="accordion__header" data-key="FAQ.accordion.card3.title">Як ви готуєте спеціалістів?</div>
+					<div class="accordion__content">
+						<p data-key="FAQ.accordion.card3.text">Усі кандидати проходять попередню перевірку досвіду, навичок, освіти та особистих якостей, а також готовність працювати в Україні. </p>
+					</div>
+				</div>
+				<div class="accordion__item">
+					<div class="accordion__header" data-key="FAQ.accordion.card4.title">З яких країн ви надаєте працівників?</div>
+					<div class="accordion__content">
+						<p data-key="FAQ.accordion.card4.text">Географія найму нашої компанії досить обширна. Ми працюємо з країнами Європи, Азії, Латинської Америки та Близького Сходу.</p>
+					</div>
+				</div>
+				<div class="accordion__item">
+					<div class="accordion__header" data-key="FAQ.accordion.card5.title">Як я можу з вами зв'язатися?</div>
+					<div class="accordion__content">
+						<p data-key="FAQ.accordion.card5.text">Ви можете зв'язатися з нами за допомогою форми зворотного зв'язку на нашому сайті або через електронну пошту, соціальні мережі та телефон, вказані в шапці сторінки.</p>
+					</div>
+				</div>
+			</div>
+			</section>	
 			<section class="section__form">
-				<div class="container__standart">
-					<h1>Знайдемо найкращого кандидата для вашого бізнесу</h1>
-					<div class="form-container container">
-						<form id="contactForm">
-							<input type="text" id="name" placeholder="Ваше ім'я" required />
-							<input type="tel" id="phone" placeholder="Ваш телефон" required />
-							<input
-								type="email"
-								id="email"
-								placeholder="Ваш Email"
-								required />
-							<button class="contact-btn" type="submit">Відправити</button>
-						</form>
+				<div class="container__standart form-flex">
+					<div class="fade-left">
+						<h1 data-key="change.needWork"></h1>
+						<button data-key="change.contactUs" class="section__main-btn open-button">
+							Залишити заявку
+						</button>
+					</div>
+				
+					<div class="fade-right">
+						<h1 data-key="change.needWorkers"></h1>
+						<button data-key="change.contactUs" class="section__main-btn open-button2">
+							Залишити заявку
+						</button>
 					</div>
 				</div>
 			</section>
 		</main>
 		<footer class="footer" id="footer">
-			<section class="section__footer">
+			<section class="section__footer fade-in">
 				<div class="container__standart">
-					<h1>Контакты</h1>
+					<h1 data-key="contacts.title"></h1>
 					<div class="section__footer-container">
 						<div class="section__footer-map">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40651.764762313695!2d30.500661735332255!3d50.446030971084404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce88e35e395f%3A0xc63774cf5da5a434!2z0KHQvtGE0LjQudGB0LrQuNC5INGB0L7QsdC-0YA!5e0!3m2!1sru!2sua!4v1772446937321!5m2!1sru!2sua" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1176.9612749435337!2d30.503499772714996!3d50.463219076323206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce6ec991d6d7%3A0x46370828c7509726!2z0YPQuy4g0JPQu9GD0LHQvtGH0LjRhtC60LDRjywgNzMsINCa0LjQtdCyLCAwNDA1Mg!5e0!3m2!1sru!2sua!4v1774253186449!5m2!1sru!2sua" width="600" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</div>
 						<div class="section__footer-info">
 							<div class="section__footer-contacts">
 								<p><img src="./assets/img/icons/phone.svg" alt=""> +3806812523332</p>
 								<p><img src="./assets/img/icons/mail.svg" alt=""> info@mail.com</p>
-								<p>Софийский собор</br>
-									вулиця Володимирська, 24, Київ, 01001
+								<p data-key="contacts.adress"><img src="./assets/img/icons/location.svg" alt="">04052, Київська область, м. Київ </br>
+									вул. Глибочицька 73, секція 3, офіс 15
+						
 								</p>	
 							</div>
 						<div class="header__socials footer__socials">
@@ -346,14 +423,74 @@
 				<div class="footer__bot-info">
 					
 					<p>Global Hire Int. </p>
-					<p>СЕО Оксана Подобна</p>
-					<p>Вулиця Володимирська, 24, Київ, 01001</p>
-					<button class="section__main-btn">Звя'затися з нами</button>
+					<p data-key="contacts.seo">СЕО Оксана Подобна</p>
+					<p data-key="contacts.botadress">04052, Київська область, м. Київ, вул. Глибочицька 73, секція 3, офіс 15 </p>
+					<!-- <button class="section__main-btn" data-key="header.cta_button">Звя'затися з нами</button> -->
 					<img class="footer__ghi-photo" src="./assets/img/BigLogo.png" alt="#">
-					<p class="footer__ghi">© All rights reserved.</p>
+					<p class="footer__ghi" data-key="contacts.rights">© All rights reserved.</p>
 				</div>
 				
 			</section>		
 		</footer>
+
+<div id="popup" class="popup">
+		<div class="popup__overlay"></div>
+		<div class="popup__content">
+			<button class="popup__close">&times;</button>
+			<h3 data-key="popups.workpopup.title">Потрібна робота?</h3>
+			<p data-key="popups.workerspopup.under_title">Залиши заявку і ми зв'яжемося з тобою найближчим часом.</p>
+			<div class="section__form popup__form">
+						<form id="contactForm">
+							<input type="text" id="name" data-key="popups.workerspopup.placeholders.name" placeholder="popups.workerspopup.placeholders.name" required />
+							<input type="tel" id="phone" data-key="popups.workerspopup.placeholders.phone" placeholder="popups.workerspopup.placeholders.phone" required />
+							<input
+								type="email"
+								id="email"
+								data-key="popups.workerspopup.placeholders.email"
+								placeholder="popups.workerspopup.placeholders.email"
+								required />
+								
+							<button data-key="popups.workerspopup.button" class="contact-btn" type="submit">Відправити</button>
+						</form>
+			</div>
+			
+		</div>
+	</div>
+	<div id="popup2" class="popup">
+		<div class="popup__overlay"></div>
+		<div class="popup__content">
+			<button class="popup__close">&times;</button>
+			<h3 data-key="popups.workerspopup.title">Потрібні працівники?</h3>
+			<p data-key="popups.workerspopup.under_title">Залиши заявку і ми зв'яжемося з тобою найближчим часом.</p>
+			<div class="section__form popup__form">
+			<form id="contactForm">
+				<input type="text" id="name" data-key="popups.workerspopup.placeholders.name" placeholder="popups.workerspopup.placeholders.name" required />
+				<input type="tel" id="phone" data-key="popups.workerspopup.placeholders.phone" placeholder="popups.workerspopup.placeholders.phone" required />
+				<input type="email" id="email" data-key="popups.workerspopup.placeholders.email" placeholder="popups.workerspopup.placeholders.email" required />
+				<input
+								type="company"
+								id="company"
+								data-key="popups.workerspopup.placeholders.company"
+								placeholder="Назва компанії"
+								required />
+				<button data-key="popups.workerspopup.button" class="contact-btn" type="submit">Відправити</button>
+			</form>
+			</div>
+			
+		</div>
+	</div>
+
 	</body>
 </html>
+
+
+<!-- <form id="contactForm" class="fade-right">
+							<input type="text" id="name" placeholder="Ваше ім'я" required />
+							<input type="tel" id="phone" placeholder="Ваш телефон" required />
+							<input
+								type="email"
+								id="email"
+								placeholder="Ваш Email"
+								required />
+							<button class="contact-btn" type="submit">Відправити</button>
+						</form> -->
