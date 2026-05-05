@@ -353,6 +353,7 @@ h1, h2, h3, h4 {
   display: none;
   position: relative;
   width: 4.4rem;
+  z-index: 9999;
   height: 4.4rem;
   background: rgba(238, 240, 244, 0.08);
   border: 1px solid rgba(238, 240, 244, 0.15);
