@@ -36,23 +36,9 @@ li {
 }
 
 @font-face {
-  font-family: "Gilroy Bold";
-  src: url("./assets/fonts/Gilroy-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
   font-family: "Gilroy Black";
   src: url("./assets/fonts/Gilroy-Black.woff2") format("woff2");
   font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gilroy Medium";
-  src: url("./assets/fonts/Gilroy-Medium.woff2") format("woff2");
-  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -1189,17 +1175,18 @@ h1, h2, h3, h4 {
 .section__partners .partners__track {
   display: flex;
   width: max-content;
-  animation: scroll 25s linear infinite;
+  animation: scroll 35s linear infinite;
 }
 @media (max-width: 768px) {
   .section__partners .partners__track {
-    animation-duration: 10s;
+    animation-duration: 25s;
   }
 }
 .section__partners .partners__item {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 250px;
   margin-right: 150px;
 }
 @media (max-width: 768px) {
@@ -1209,7 +1196,7 @@ h1, h2, h3, h4 {
 }
 .section__partners .partners__item img {
   height: 150px;
-  width: auto;
+  width: 100%;
   object-fit: contain;
 }
 @media (max-width: 768px) {
@@ -1225,7 +1212,7 @@ h1, h2, h3, h4 {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 .section__form {

@@ -725,9 +725,10 @@
 		.partners__track {
 			display: flex;
 			width: max-content;
-			animation: scroll 25s linear infinite;
+			animation: scroll 35s linear infinite;
+			// animation-play-state: paused;
 			@media (max-width: 768px) {
-				animation-duration: 10s;
+				animation-duration: 25s;
 			}
 		}
 
@@ -735,6 +736,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			width: 250px;
 			margin-right: 150px;
 			@media (max-width: 768px) {
 				margin-right: 50px;
@@ -743,7 +745,7 @@
 
 		.partners__item img {
 			height: 150px;
-			width: auto;
+			width: 100%;
 			object-fit: contain;
 			@media (max-width: 768px) {
 				height: 80px;
@@ -756,7 +758,7 @@
 				transform: translateX(0);
 			}
 			100% {
-				transform: translateX(-50%);
+				transform: translateX(-100%);
 			}
 		}
 	}
