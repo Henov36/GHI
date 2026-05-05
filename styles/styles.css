@@ -1189,6 +1189,11 @@ h1, h2, h3, h4 {
   width: max-content;
   animation: scroll 25s linear infinite;
 }
+@media (max-width: 768px) {
+  .section__partners .partners__track {
+    animation-duration: 10s;
+  }
+}
 .section__partners .partners__item {
   display: flex;
   align-items: center;

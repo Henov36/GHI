@@ -726,6 +726,9 @@
 			display: flex;
 			width: max-content;
 			animation: scroll 25s linear infinite;
+			@media (max-width: 768px) {
+				animation-duration: 10s;
+			}
 		}
 
 		.partners__item {
@@ -733,7 +736,7 @@
 			align-items: center;
 			justify-content: center;
 			margin-right: 150px;
-			@media(max-width: 768px) {
+			@media (max-width: 768px) {
 				margin-right: 50px;
 			}
 		}
@@ -742,7 +745,7 @@
 			height: 150px;
 			width: auto;
 			object-fit: contain;
-			@media(max-width: 768px) {
+			@media (max-width: 768px) {
 				height: 80px;
 			}
 		}
