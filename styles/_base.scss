@@ -124,7 +124,7 @@ h1, h2, h3, h4 {
 
 .fade-down {
 	opacity: 0;
-	transform: translateY(-100px);
+	// transform: translateY(-100px);
 	transition:
 		opacity 0.9s var(--ease-out),
 		transform 0.9s var(--ease-out);

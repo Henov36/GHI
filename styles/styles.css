@@ -161,7 +161,6 @@ h1, h2, h3, h4 {
 
 .fade-down {
   opacity: 0;
-  transform: translateY(-100px);
   transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
 }
 
@@ -584,7 +583,7 @@ h1, h2, h3, h4 {
 }
 
 .section__main {
-  background-image: url("../assets/img/main2.jpg");
+  background-image: url("../assets/img/main211.jpg");
   background-position: center 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -923,7 +922,7 @@ h1, h2, h3, h4 {
   font-size: 2rem;
 }
 .section__specialist {
-  background-image: url("../assets/img/main.jpg");
+  background-image: url("../assets/img/main11.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
