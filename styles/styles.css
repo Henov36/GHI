@@ -87,6 +87,9 @@ section {
     padding: 6rem 0;
   }
 }
+section {
+  overflow: hidden;
+}
 
 h1 {
   font-size: 4rem;
@@ -581,7 +584,7 @@ h1, h2, h3, h4 {
 }
 
 .section__main {
-  background-image: url("../assets/img/main2.jpeg");
+  background-image: url("../assets/img/main2.jpg");
   background-position: center 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -920,7 +923,7 @@ h1, h2, h3, h4 {
   font-size: 2rem;
 }
 .section__specialist {
-  background-image: url("../assets/img/main.jpeg");
+  background-image: url("../assets/img/main.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
